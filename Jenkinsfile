@@ -20,7 +20,7 @@ pipeline {
 		stage('image build') { 
             steps {
                 sh "docker images"
-                sh "docker build -t myJavaImage:1.0"
+                sh "docker build -t myjavaimage ."
 
     		}
     	}
