@@ -21,6 +21,8 @@ pipeline {
             steps {
                 sh "docker images"
                 sh "docker build -t myjavaimage ."
+                sh "docker login -luckdockerdevops/Lucky@123"
+                sh "docker push luckdockerdevops/myjavaimage"
 
     		}
     	}
