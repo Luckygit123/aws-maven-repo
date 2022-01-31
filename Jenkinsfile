@@ -17,5 +17,8 @@ pipeline {
                 sh "mvn package" 
             }
         }
+	stage('image build') { 
+            steps {
+                sh "docker images"
     }
 }
