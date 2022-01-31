@@ -22,6 +22,7 @@ pipeline {
                 sh "docker images"
                 sh "docker build -t myjavaimage ."
                 sh "docker login -u luckdockerdevops -p Lucky@123"
+                sh "docker tag myjavaimage:latest luckdockerdevops/myjavaimage:latest"
                 sh "docker push luckdockerdevops/myjavaimage:latest"
 
     		}
